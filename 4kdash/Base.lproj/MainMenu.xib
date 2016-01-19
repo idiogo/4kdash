@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4510"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="3336"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="494" id="495"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application"/>
+        <menu title="AMainMenu" systemMenu="main" id="29">
+            <items>
+                <menuItem title="4kdash" id="56">
+                    <menu key="submenu" title="4kdash" systemMenu="apple" id="57">
+                        <items>
+                            <menuItem title="About 4kdash" id="58">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="236">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Preferences…" keyEquivalent="," id="129"/>
+                            <menuItem isSeparatorItem="YES" id="143">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Services" id="131">
+                                <menu key="submenu" title="Services" systemMenu="services" id="130"/>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="144">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Hide 4kdash" keyEquivalent="h" id="134">
+                                <connections>
+                                    <action selector="hide:" target="-1" id="367"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Hide Others" keyEquivalent="h" id="145">
+                                <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                <connections>
+                                    <action selector="hideOtherApplications:" target="-1" id="368"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Show All" id="150">
+                                <connections>
+                                    <action selector="unhideAllApplications:" target="-1" id="370"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="149">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Quit 4kdash" keyEquivalent="q" id="136">
+                                <connections>
+                                    <action selector="terminate:" target="-3" id="449"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Dashboards" id="fcx-UT-Mx6">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Dashboards" id="jXb-Q3-Qny">
+                        <items>
+                            <menuItem title="Esquerda" id="LY2-Dg-zzV">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Esquerda" systemMenu="font" id="jRq-7W-Oze">
+                                    <items>
+                                        <menuItem title="Mobile e Servers (Real time)" id="i7j-YX-HpN">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="changeLeftUrl:" target="494" id="QnN-7P-vad"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Acquisition" tag="1" id="Inr-ba-e59">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="changeLeftUrl:" target="494" id="4Ei-iI-emR"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Direita" id="mGW-xZ-fx3">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Direita" id="GMF-JP-qeH">
+                                    <items>
+                                        <menuItem title="Mobile e Servers (Real time)" id="Cjc-6g-gC6">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="changeRightUrl:" target="494" id="dnG-3M-0Po"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Acquisition" tag="1" id="ydk-Jy-Nbq">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="changeRightUrl:" target="494" id="0DU-4z-EUh"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Window" id="19">
+                    <menu key="submenu" title="Window" systemMenu="window" id="24">
+                        <items>
+                            <menuItem title="Minimize" keyEquivalent="m" id="23">
+                                <connections>
+                                    <action selector="performMiniaturize:" target="-1" id="37"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Zoom" id="239">
+                                <connections>
+                                    <action selector="performZoom:" target="-1" id="240"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="92">
+                                <modifierMask key="keyEquivalentModifierMask" command="YES"/>
+                            </menuItem>
+                            <menuItem title="Bring All to Front" id="5">
+                                <connections>
+                                    <action selector="arrangeInFront:" target="-1" id="39"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem title="Help" id="490">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+            </items>
+        </menu>
+        <window title="4kdash" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="371">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenPrimary="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1600" height="878"/>
+            <view key="contentView" id="372">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <webView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqP-Kf-r6e">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="360"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                            <nil key="identifier"/>
+                        </webPreferences>
+                        <connections>
+                            <outlet property="frameLoadDelegate" destination="494" id="BSn-EY-s8k"/>
+                        </connections>
+                    </webView>
+                    <webView ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mZ3-md-vdj">
+                        <rect key="frame" x="240" y="0.0" width="240" height="360"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <webPreferences key="preferences" defaultFontSize="12" defaultFixedFontSize="12">
+                            <nil key="identifier"/>
+                        </webPreferences>
+                        <connections>
+                            <outlet property="frameLoadDelegate" destination="494" id="EKc-xh-3RL"/>
+                        </connections>
+                    </webView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dqP-Kf-r6e" firstAttribute="top" secondItem="372" secondAttribute="top" id="Ppo-OF-FPT"/>
+                    <constraint firstAttribute="bottom" secondItem="dqP-Kf-r6e" secondAttribute="bottom" id="SyM-TE-PV8"/>
+                    <constraint firstAttribute="bottom" secondItem="mZ3-md-vdj" secondAttribute="bottom" id="e8c-mP-KdG"/>
+                    <constraint firstAttribute="trailing" secondItem="mZ3-md-vdj" secondAttribute="trailing" id="gLq-Y5-nb7"/>
+                    <constraint firstItem="dqP-Kf-r6e" firstAttribute="leading" secondItem="372" secondAttribute="leading" id="sEz-gM-M2Y"/>
+                    <constraint firstItem="mZ3-md-vdj" firstAttribute="top" secondItem="372" secondAttribute="top" id="vmJ-Ul-jwd"/>
+                </constraints>
+            </view>
+        </window>
+        <customObject id="494" customClass="AppDelegate">
+            <connections>
+                <outlet property="view" destination="372" id="kn4-sP-6ZG"/>
+                <outlet property="window" destination="371" id="532"/>
+                <outlet property="wv1" destination="dqP-Kf-r6e" id="Jwr-Ip-dWP"/>
+                <outlet property="wv2" destination="mZ3-md-vdj" id="Vfg-JX-Y8N"/>
+            </connections>
+        </customObject>
+        <customObject id="420" customClass="NSFontManager"/>
+    </objects>
+</document>
